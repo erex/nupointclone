@@ -1,4 +1,0 @@
-norm.atten.gof <- function () 
-{
-}
-

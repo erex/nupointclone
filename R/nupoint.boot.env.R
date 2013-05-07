@@ -1,4 +1,0 @@
-nupoint.boot.env <- function () 
-{
-}
-
