@@ -1,34 +1,13 @@
 Package: nupoint
 Title: 2D distance sampling
-Version: 1.0.48
+Version: 1.0.50
 Author: Martin Cox, David Borchers and Natalie Kelly
 Description: Provides functions to fit detection functions while allowing for
     non-uniform distribution of objects (which vary with some underlying
-    environmental/spatial covariate) from a point transect.
+    environmental/spatial covariate) from a point transect. For R 3.0+
 Depends:
     fields,
     nor1mix
 Maintainer: Martin Cox <nupointR@gmail.com>
 License: GPL-2
-Built: R 2.15.2; ; 2013-03-21 22:49:02 UTC; windows
-Collate:
-    'boot.nupoint.env.R'
-    'detectF.R'
-    'environ.fit.f.R'
-    'environ.simulator.f.R'
-    'GoF.environ.fit.f.R'
-    'make.atten.f.R'
-    'MBE.fit.f.R'
-    'norm.atten.gof.R'
-    'nupoint.boot.env.R'
-    'nupoint.boot.R'
-    'nupoint.env.boot.R'
-    'nupoint.env.fit.R'
-    'nupoint.env.gof.R'
-    'nupoint.env.simulator.R'
-    'nupoint.fit.R'
-    'nupoint.gof.R'
-    'nupoint.p.star.R'
-    'nupoint.vol.density.R'
-    'shore.calc.integral.grid.R'
-    'shore.get.numerator.mbe.R'
+
