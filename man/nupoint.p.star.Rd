@@ -3,7 +3,8 @@
 \title{Calculate the probability of detecting a target within the covered area given
 a parallel density gradient.}
 \usage{
-nupoint.p.star(pars.hat, grad.type, det.type, n = NULL, w, theta.max, grid.density = 100, attenuation = FALSE, 
+  nupoint.p.star(pars.hat, grad.type, det.type, n = NULL,
+    w, theta.max, grid.density = 100, attenuation = FALSE,
     angularDetect = FALSE)
 }
 \arguments{
@@ -63,11 +64,13 @@ nupoint.p.star(pars.hat, grad.type, det.type, n = NULL, w, theta.max, grid.densi
 }
 \examples{
 \dontrun{
-nupoint.p.star(pars.hat = c(50, 20, 60), grad.type = "NORM", det.type = "HNORM", n = NULL, w = 100, theta.max = pi/3, 
-    grid.density = 100, attenuation = FALSE, angularDetect = FALSE)
+nupoint.p.star(pars.hat=c(50,20,60),grad.type='NORM',det.type='HNORM',n=NULL,w=100,
+ theta.max=pi/3,grid.density=100,
+ attenuation=FALSE,angularDetect=FALSE)
 }
 }
 \seealso{
   \code{\link{nupoint.fit}}
 }
 \keyword{misc}
+

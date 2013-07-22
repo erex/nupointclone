@@ -10,4 +10,28 @@ Depends:
     nor1mix
 Maintainer: Martin Cox <nupointR@gmail.com>
 License: GPL-2
-
+Collate:
+    'GoF.environ.fit.f.R'
+    'MBE.fit.f.R'
+    'boot.nupoint.env.R'
+    'detectF.R'
+    'environ.fit.f.R'
+    'environ.simulator.f.R'
+    'estimate.abund.R'
+    'make.atten.f.R'
+    'norm.atten.gof.R'
+    'nupoint.boot.R'
+    'nupoint.boot.env.R'
+    'nupoint.env.boot.R'
+    'nupoint.env.fit.R'
+    'nupoint.env.gof.R'
+    'nupoint.env.simulator.R'
+    'nupoint.fit.R'
+    'nupoint.gof.R'
+    'nupoint.p.star.R'
+    'nupoint.vol.density.R'
+    'par.unpack.R'
+    'pi.z.f.R'
+    'shore.calc.integral.grid.R'
+    'shore.get.numerator.mbe.R'
+    'bound.chk.R'

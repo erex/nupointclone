@@ -2,10 +2,14 @@
 \alias{environ.simulator.f}
 \title{Simulate data with non-parallel gradient}
 \usage{
-environ.simulator.f(pars = c(60, 10, 50), z.mat = NULL, xlim = c(0, 200), ylim = c(0, 100), grid.resolution = 1, 
-    grad.type = "NORM", det.type = "HNORM", observer.coords = c(100, 0), nbr.targets = 350, environment.simulator.control = list(c(X = 50, 
-        Y = 10, sd = 60), c(X = 90, Y = 0, sd = 30)), mask.mat = NULL, mask.ang = 0, plot = TRUE, perp.lines = NULL, 
-    n = NULL)
+  environ.simulator.f(pars = c(60, 10, 50), z.mat = NULL,
+    xlim = c(0, 200), ylim = c(0, 100),
+    grid.resolution = 1, grad.type = "NORM",
+    det.type = "HNORM", observer.coords = c(100, 0),
+    nbr.targets = 350,
+    environment.simulator.control = list(c(X = 50, Y = 10, sd = 60), c(X = 90, Y = 0, sd = 30)),
+    mask.mat = NULL, mask.ang = 0, plot = TRUE,
+    perp.lines = NULL, n = NULL)
 }
 \arguments{
   \item{pars}{Parameters of the gradient and detection
@@ -50,3 +54,4 @@ environ.simulator.f(pars = c(60, 10, 50), z.mat = NULL, xlim = c(0, 200), ylim =
 \seealso{
   detectF
 }
+

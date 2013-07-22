@@ -2,7 +2,8 @@
 \alias{make.atten.f}
 \title{Fit a attenuation function}
 \usage{
-make.atten.f(prep.dist, form, starting.pars, plot = FALSE, summary = FALSE)
+  make.atten.f(prep.dist, form, starting.pars,
+    plot = FALSE, summary = FALSE)
 }
 \arguments{
   \item{prep.dist}{\code{vector of a representative sample
@@ -51,15 +52,15 @@ make.atten.f(prep.dist, form, starting.pars, plot = FALSE, summary = FALSE)
   C (Applied Statistics).
 }
 \examples{
-# use the seabed depth under each krill swarm 'krill$z' to create an attenuation function based on a normal
-# distribution
+#use the seabed depth under each krill swarm 'krill$z' to create an attenuation function based on a normal distribution
 \dontrun{
 ls()
-atten.fit = make.atten.f(prep.dist = krill$z, form = "norm", starting.pars = c(90, 10))
-ls()  #function named atten.f now exists in workspace
+atten.fit=make.atten.f(prep.dist=krill$z,form='norm',starting.pars=c(90,10))
+ls() #function named atten.f now exists in workspace
 }
 }
 \seealso{
   \code{\link{nupoint.fit}}
 }
 \keyword{misc}
+

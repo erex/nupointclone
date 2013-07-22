@@ -2,7 +2,8 @@
 \alias{shore.get.numerator.mbe}
 \title{Calculate log-likelihood numerator}
 \usage{
-shore.get.numerator.mbe(pars, sight.x, swarm.depth, w, seabed.z, grad.type, det.type, n = NULL, angularDetect, 
+  shore.get.numerator.mbe(pars, sight.x, swarm.depth, w,
+    seabed.z, grad.type, det.type, n = NULL, angularDetect,
     x.max)
 }
 \arguments{
@@ -42,3 +43,4 @@ shore.get.numerator.mbe(pars, sight.x, swarm.depth, w, seabed.z, grad.type, det.
 \description{
   Calculate log-likelihood numerator
 }
+

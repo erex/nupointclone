@@ -2,7 +2,9 @@
 \alias{shore.calc.integral.grid}
 \title{Calculate value at a given numerical integration cell in the likelihood denominator.}
 \usage{
-shore.calc.integral.grid(x, y, pars, trunc.dist, grad.type, det.type, n = NULL, attenuation, angularDetect)
+  shore.calc.integral.grid(x, y, pars, trunc.dist,
+    grad.type, det.type, n = NULL, attenuation,
+    angularDetect)
 }
 \arguments{
   \item{x}{and y coordinates}
@@ -36,3 +38,4 @@ shore.calc.integral.grid(x, y, pars, trunc.dist, grad.type, det.type, n = NULL, 
   Calculate value at a given numerical integration cell in
   the likelihood denominator.
 }
+

@@ -2,8 +2,9 @@
 \alias{GoF.environ.fit.f}
 \title{Chi-sq GoF for whale data (this is the 1D version)}
 \usage{
-GoF.environ.fit.f(pars, r.mat, z.mat, minz, wz, z.obs, grad.type, det.type, nbr.intervals, plot = FALSE, n = NULL, 
-    dzdy.mat, breaks = NULL)
+  GoF.environ.fit.f(pars, r.mat, z.mat, minz, wz, z.obs,
+    grad.type, det.type, nbr.intervals, plot = FALSE,
+    n = NULL, dzdy.mat, breaks = NULL)
 }
 \arguments{
   \item{pars}{= model parameters, paramter vector optimised
@@ -50,3 +51,4 @@ GoF.environ.fit.f(pars, r.mat, z.mat, minz, wz, z.obs, grad.type, det.type, nbr.
   Requires fields package, functions: histline; detectF;
   pi.z.f
 }
+

@@ -3,8 +3,11 @@
 \title{Maximum likelihood estimate of parameters describing parallel density
 gradient and range detection functions}
 \usage{
-nupoint.fit(pars, sight.x, sight.y, sight.z = NULL, w, theta.max, grad.type, det.type, n = NULL, grid.density = 100, 
-    angularDetect = FALSE, verbose = FALSE, lower.b, upper.b, optim.control = NULL)
+  nupoint.fit(pars, sight.x, sight.y, sight.z = NULL, w,
+    theta.max, grad.type, det.type, n = NULL,
+    grid.density = 100, angularDetect = FALSE,
+    verbose = FALSE, lower.b, upper.b,
+    optim.control = NULL)
 }
 \arguments{
   \item{pars}{\code{a single vector of starting parameters
@@ -80,29 +83,66 @@ nupoint.fit(pars, sight.x, sight.y, sight.z = NULL, w, theta.max, grad.type, det
   2011).
 }
 \examples{
-## Don't run: Example 1
-norm.fit <- nupoint.fit(c(50, 20, 50), sight.x = krill$x, sight.y = krill$y, w = 100, theta.max = pi/3, grad.type = "NORM", 
-    det.type = "HNORM", lower.b = c(1, 1, 1), upper.b = c(120, 100, 100))
-# --------------------------- Parallel density gradient likelihood settings ---------------------------
-# Depth preference parametric form: NORM range detection function, g(r), parametric form: HNORM Parameter
-# starting values = 50 20 50 Angular detection function applied: FALSE Seabed attenuation function applied:
-# FALSE Truncation distance = 100 Swath (max) angle, rad = 1.047198 Numerical integration grid density= 100
-# --------------------------- Estimating parameters --------------------------- Maximum likelihood results
-# --------------------------- parameter estimates 81.736 25.144 38.194 AIC = -3.02
-# --------------------------- Example 2 create an attenuation function:
-at.fit = make.atten.f(depths = krill$z, form = "norm", starting.pars = c(90, 10), plot = TRUE)
-# fit a Beta vertical distribution:
-mbe.beta = nupoint.fit(pars = c(3, 1.5, 40), sight.x = krill$x, sight.y = krill$y, sight.z = krill$z, w = 100, 
-    theta.max = pi/3, grad.type = "BETA", det.type = "HNORM", grid.density = 100, lower.b = c(0.5, 0.5, 10), upper.b = c(20, 
-        20, 1000))
-# --------------------------- Parallel density gradient likelihood settings ---------------------------
-# Depth preference parametric form: BETA range detection function, g(r), parametric form: HNORM Parameter
-# starting values = 3 1.5 40 Angular detection function applied: FALSE Seabed attenuation function applied:
-# TRUE function(seabedDepth) 1-pnorm(seabedDepth,95.1141535839473,10.5625798419803) <environment:
-# 0x06e6beb0> Truncation distance = 100 Swath (max) angle, rad = 1.047198 Numerical integration grid
-# density= 100 --------------------------- Estimating parameters --------------------------- Maximum
-# likelihood results --------------------------- parameter estimates 3.52 1.281 38.914 AIC = 484.63
-# --------------------------- End don't run
+##Don't run:
+#Example 1
+norm.fit <-   nupoint.fit(c(50,20,50),
+                      sight.x=krill$x,
+                      sight.y=krill$y,
+                      w=100,
+                      theta.max=pi/3,
+                      grad.type="NORM",
+                      det.type="HNORM",
+                      lower.b=c(1,1,1),
+                      upper.b=c(120,100,100))
+# ---------------------------
+#   Parallel density gradient likelihood settings
+# ---------------------------
+#   Depth preference parametric form: NORM
+# range detection function, g(r), parametric form: HNORM
+# Parameter starting values = 50 20 50
+# Angular detection function applied: FALSE
+# Seabed attenuation function applied: FALSE
+# Truncation distance = 100
+# Swath (max) angle, rad = 1.047198
+# Numerical integration grid density= 100
+# ---------------------------
+#   Estimating parameters
+# ---------------------------
+#   Maximum likelihood results
+# ---------------------------
+#   parameter estimates
+# 81.736 25.144 38.194
+# AIC = -3.02
+# ---------------------------
+#Example 2
+#create an attenuation function:
+at.fit=make.atten.f(depths=krill$z,form='norm',starting.pars=c(90,10),plot=TRUE)
+#fit a Beta vertical distribution:
+mbe.beta=nupoint.fit(pars=c(3,1.5,40), sight.x=krill$x, sight.y=krill$y,sight.z=krill$z,
+                     w=100,theta.max=pi/3,grad.type='BETA',det.type='HNORM',grid.density=100,lower.b=c(0.5,0.5,10),upper.b=c(20,20,1000))
+#---------------------------
+#Parallel density gradient likelihood settings
+#---------------------------
+#Depth preference parametric form: BETA
+#range detection function, g(r), parametric form: HNORM
+#Parameter starting values = 3 1.5 40
+#Angular detection function applied: FALSE
+#Seabed attenuation function applied: TRUE
+#function(seabedDepth) 1-pnorm(seabedDepth,95.1141535839473,10.5625798419803)
+#<environment: 0x06e6beb0>
+#Truncation distance = 100
+#Swath (max) angle, rad = 1.047198
+#Numerical integration grid density= 100
+#---------------------------
+#Estimating parameters
+#---------------------------
+#Maximum likelihood results
+#---------------------------
+#parameter estimates
+#3.52 1.281 38.914
+#AIC = 484.63
+#---------------------------
+##End don't run
 }
 \references{
   Cox, M.J., Borchers, D.L., Demer, D.A., Cutter, G.R., and
@@ -122,3 +162,4 @@ mbe.beta = nupoint.fit(pars = c(3, 1.5, 40), sight.x = krill$x, sight.y = krill$
   \code{optim}
 }
 \keyword{misc}
+

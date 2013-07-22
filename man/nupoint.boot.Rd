@@ -2,8 +2,11 @@
 \alias{nupoint.boot}
 \title{Non-parametric bootstrap for depth preference}
 \usage{
-nupoint.boot(observations, nboot, blockVar, initial.pars, grad.type, det.type, w, theta.max, n = NULL, attenuation = FALSE, 
-    grid.density = 100, lower.b, upper.b, angularDetect = FALSE, L = NULL, A = NULL, shoalBioMass = NULL)
+  nupoint.boot(observations, nboot, blockVar, initial.pars,
+    grad.type, det.type, w, theta.max, n = NULL,
+    attenuation = FALSE, grid.density = 100, lower.b,
+    upper.b, angularDetect = FALSE, L = NULL, A = NULL,
+    shoalBioMass = NULL)
 }
 \arguments{
   \item{observations}{\code{data.frame of shaol
@@ -118,7 +121,7 @@ boot.res <- nupoint.boot(observations=krill,
  det.type='HNORM',
  w=100,
  theta.max=pi/3,
- #n=NULL,
+ n=NULL,
  attenuation=FALSE,
  grid.density=100,
  lower.b=c(1,1,1),
@@ -135,3 +138,4 @@ boot.res <- nupoint.boot(observations=krill,
   \code{\link{nupoint.vol.density}},'krill'
 }
 \keyword{misc}
+

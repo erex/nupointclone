@@ -2,7 +2,7 @@
 \alias{detectF}
 \title{Probability of detection at a given range}
 \usage{
-detectF(rd, det.type, det.par)
+  detectF(rd, det.type, det.par)
 }
 \arguments{
   \item{rd}{\code{radial distance from observer to detected
@@ -46,11 +46,12 @@ detectF(rd, det.type, det.par)
   47.
 }
 \examples{
-rVec = 0:100
-pVec = detectF(rd = rVec, det.type = "HNORM", det.par = 50)
-plot(rVec, pVec, type = "l", xlab = "Distance", ylab = "Pr(detect)")
+rVec=0:100
+pVec=detectF(rd=rVec, det.type='HNORM', det.par=50)
+plot(rVec,pVec,type='l',xlab='Distance',ylab='Pr(detect)')
 }
 \seealso{
   \code{\link{nupoint.env.fit}}, \code{\link{nupoint.fit}}
 }
 \keyword{misc}
+

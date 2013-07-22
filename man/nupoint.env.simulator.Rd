@@ -3,10 +3,14 @@
 \title{Simulator for shore-based distance observations of animals distributed along
 an environmental gradient}
 \usage{
-nupoint.env.simulator(pars = c(60, 10, 50), z.mat = NULL, xlim = c(0, 200), ylim = c(0, 100), grid.resolution = 1, 
-    grad.type = "NORM", det.type = "HNORM", observer.coords = c(100, 0), nbr.targets = 350, environment.simulator.control = list(c(X = 50, 
-        Y = 10, sd = 60), c(X = 90, Y = 0, sd = 30)), slope.control = NULL, mask.mat = NULL, mask.ang = 0, plot = TRUE, 
-    perp.lines = NULL, n = NULL)
+  nupoint.env.simulator(pars = c(60, 10, 50), z.mat = NULL,
+    xlim = c(0, 200), ylim = c(0, 100),
+    grid.resolution = 1, grad.type = "NORM",
+    det.type = "HNORM", observer.coords = c(100, 0),
+    nbr.targets = 350,
+    environment.simulator.control = list(c(X = 50, Y = 10, sd = 60), c(X = 90, Y = 0, sd = 30)),
+    slope.control = NULL, mask.mat = NULL, mask.ang = 0,
+    plot = TRUE, perp.lines = NULL, n = NULL)
 }
 \arguments{
   \item{pars}{\code{vector of parameters to simulate from
@@ -177,12 +181,15 @@ nupoint.env.simulator(pars = c(60, 10, 50), z.mat = NULL, xlim = c(0, 200), ylim
   perpendicular transect.
 }
 \examples{
-environ.sim.dat = nupoint.env.simulator(pars = c(60, 10, 50), z.mat = NULL, xlim = c(0, 200), ylim = c(0, 100), 
-    grid.resolution = 1, grad.type = "NORM", det.type = "HNORM", observer.coords = c(100, 0), nbr.targets = 350, 
-    environment.simulator.control = list(c(X = 50, Y = 10, sd = 60), c(X = 90, Y = 0, sd = 30)), mask.mat = NULL, 
-    mask.ang = 0, plot = TRUE, perp.lines = NULL, n = NULL)
+environ.sim.dat=nupoint.env.simulator(pars=c(60,10,50),z.mat=NULL,xlim=c(0,200),ylim=c(0,100),
+                      grid.resolution=1,grad.type='NORM',det.type='HNORM',
+                      observer.coords=c(100,0),nbr.targets=350,
+                      environment.simulator.control=list(c(X=50,Y=10,sd=60),c(X=90,Y=0,sd=30)),
+                      mask.mat=NULL,mask.ang=0,plot=TRUE,
+                      perp.lines=NULL,n=NULL)
 }
 \seealso{
   \code{\link{detectF}}, \code{\link{nupoint.env.fit}}
 }
 \keyword{misc}
+

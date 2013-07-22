@@ -2,7 +2,9 @@
 \alias{nupoint.env.boot}
 \title{Non-parametric bootstrap for environmental preference}
 \usage{
-nupoint.env.boot(sightings, nboot, blockVar = NULL, initial.pars, grad.type, det.type, n = NULL, lower.b, upper.b)
+  nupoint.env.boot(sightings, nboot, blockVar = NULL,
+    initial.pars, grad.type, det.type, n = NULL, lower.b,
+    upper.b)
 }
 \arguments{
   \item{sightings}{\code{list object of sightings and
@@ -91,11 +93,16 @@ nupoint.env.boot(sightings, nboot, blockVar = NULL, initial.pars, grad.type, det
 }
 \examples{
 \dontrun{
-boot.res = nupoint.env.boot(sightings = sightings, nboot = 100, blockVar = "obs.period", initial.pars = c(1171.479, 
-    503.87, 3020.442), grad.type = "NORM", det.type = "HNORM", lower.b = c(-2000, 1, 1), upper.b = c(10000, 
-    10000, 10000))
-par(mfrow = c(1, 3))
-sapply(colnames(boot.res), function(x) hist(boot.res[, x], main = x, xlab = "Estimate"))
+boot.res=nupoint.env.boot(sightings=sightings,
+              nboot=100,
+              blockVar='obs.period',
+              initial.pars=c(1171.479,503.87,3020.442),
+              grad.type='NORM',
+              det.type='HNORM',
+              lower.b=c(-2000,1,1),
+              upper.b=c(10000,10000,10000))
+par(mfrow=c(1,3))
+sapply(colnames(boot.res),function(x) hist(boot.res[,x],main=x,xlab='Estimate'))
 }
 }
 \seealso{
@@ -103,3 +110,4 @@ sapply(colnames(boot.res), function(x) hist(boot.res[, x], main = x, xlab = "Est
   \code{\link{sightings}}
 }
 \keyword{misc}
+

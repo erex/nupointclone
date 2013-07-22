@@ -2,7 +2,7 @@
 \alias{nupoint.vol.density}
 \title{Calculate volumetric density of targets for a parallel density survey}
 \usage{
-nupoint.vol.density(n.seen, L, w, theta.max, P.star)
+  nupoint.vol.density(n.seen, L, w, theta.max, P.star)
 }
 \arguments{
   \item{n.seen}{\code{number of targets detected.}}
@@ -31,7 +31,7 @@ nupoint.vol.density(n.seen, L, w, theta.max, P.star)
 }
 \examples{
 \dontrun{
-nupoint.vol.density(n.seen = 251, L = 11 * 2.5 * 1000, w = 100, theta.max = pi/3, P.star = 0.079)
+nupoint.vol.density(n.seen=251, L=11*2.5*1e3, w=100, theta.max=pi/3, P.star=0.079)
 }
 }
 \seealso{
@@ -39,3 +39,4 @@ nupoint.vol.density(n.seen = 251, L = 11 * 2.5 * 1000, w = 100, theta.max = pi/3
   5.1 of the \code{parallel.pdf} vignette
 }
 \keyword{misc}
+
