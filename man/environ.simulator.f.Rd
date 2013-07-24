@@ -48,6 +48,15 @@
   \item{n}{Number of parameters passed in associated with
   gradient and detection function}
 }
+\value{
+  list consisting of \describe{ \item{sightings}{the
+  simulated sightings} \item{rd.mat}{matrix of radial
+  distances to grid points} \item{z.mat}{covariate value at
+  grid points} \item{zGradMat}{gradient of covariate values
+  at grid points} \item{settings}{characteristics
+  describing the simulation such as grid description,
+  detection and distribution models} }
+}
 \description{
   Simulate data with non-parallel gradient
 }

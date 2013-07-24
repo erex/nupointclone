@@ -15,6 +15,14 @@
 #' @param perp.lines Structure list(nbr.transects=2,min.stop=70,max.stop=100)
 #' @param n Number of parameters passed in associated with gradient and detection function
 #' @seealso detectF
+#' @return list consisting of 
+#' \describe{
+#'    \item{sightings}{the simulated sightings}
+#'    \item{rd.mat}{matrix of radial distances to grid points}
+#'    \item{z.mat}{covariate value at grid points}
+#'    \item{zGradMat}{gradient of covariate values at grid points}
+#'    \item{settings}{characteristics describing the simulation such as grid description, detection and distribution models}
+#'    }
 environ.simulator.f <- function(pars=c(60,10,50),z.mat=NULL,xlim=c(0,200),ylim=c(0,100),
                        grid.resolution=1,grad.type='NORM',det.type='HNORM',
                        observer.coords=c(100,0),nbr.targets=350,
