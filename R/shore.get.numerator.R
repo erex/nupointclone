@@ -33,6 +33,6 @@ shore.get.numerator <- function(pars,z,dzdy,rd, minz,wx,wz,grad.type,det.type,n=
     cat('detect pars =',det.par,'\n')
     cat('pi_z = ',summary(pi.z),'\n')} #end of if diagnostic.
   detV=log(detectF(rd=rd,det.type=det.type,det.par=det.par))
-  OUT = sum(detV + log(dzdy) + log(pi.z) + log(1/2*wx))
+  OUT = sum(detV + log(dzdy) + log(pi.z) + log(1/(2*wx)))
   return(OUT)
 }
