@@ -41,6 +41,6 @@ shore.get.denominator <- function(pars,num.detects,wx,wy,minz,wz,grad.type,
     cat('detect pars =',det.par,'\n')
     cat('det.mat mean =',mean(det.mat,na.rm=TRUE),'\n')
     cat('pi.z summary =',summary(as.vector(pi.z)),'\n')}
-  denominator <- num.detects * -log(sum( pi.z * det.mat*dzdy.mat,na.rm=TRUE)/(2*wx))####
+  denominator <- num.detects * -log(sum( pi.z * det.mat*abs(dzdy.mat),na.rm=TRUE)/(2*wx))####
   return(denominator)
 }
