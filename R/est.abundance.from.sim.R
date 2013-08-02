@@ -42,7 +42,7 @@
 #'  wrong.uni <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="UNIFORM")
 #'  wrong.beta <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="BETA")
 #'  wrong.lognorm <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="LOGNORM")
-
+#'#  compare AIC scores among the 4 models; which is lowest?
 
 est.abundance.from.sim <- function(environ.sim.dat, trunc.prop=0.9, det.model=NULL,
                                    gradient.model=NULL) {

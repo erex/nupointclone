@@ -2,13 +2,22 @@
 \alias{est.abundance.from.sim}
 \title{Estimate animal abundance only in the circumstance where data come from simulation}
 \usage{
-  est.abundance.from.sim(environ.sim.dat, trunc.prop = 0.9)
+  est.abundance.from.sim(environ.sim.dat, trunc.prop = 0.9,
+    det.model = NULL, gradient.model = NULL)
 }
 \arguments{
   \item{fit.obj}{fitted object}
 
   \item{truncation}{distance proportion (default 0.9) such
   that sightings beyond 0.9*max.r are deleted}
+
+  \item{det.model}{detection model under which to perform
+  estimation, if NULL (default), then estimation is
+  performed under true model}
+
+  \item{gradient.model}{gradient model under which to
+  perform estimation, if NULL (default), estimation is
+  performed under true model}
 }
 \value{
   list containing abundance estimate within covered region
@@ -38,7 +47,11 @@ mysim <- nupoint.env.simulator(pars=c(60,10,50),z.mat=NULL,xlim=c(0,200),ylim=c(
            environment.simulator.control=list(c(X=50,Y=10,sd=60),c(X=90,Y=0,sd=30)),
            mask.mat=NULL,mask.ang=0,plot=TRUE,
            perp.lines=NULL,n=NULL)
- (test <- est.abundance.from.sim(mysim, trunc.prop=0.9))
+ correct.model <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model=NULL)
+ wrong.uni <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="UNIFORM")
+ wrong.beta <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="BETA")
+ wrong.lognorm <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="LOGNORM")
+#  compare AIC scores among the 4 models; which is lowest?
 }
 \author{
   Eric Rexstad
