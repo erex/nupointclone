@@ -5,7 +5,7 @@
 #'
 #'@return truncation radius
 #'@return sightings data frame without detections beyond 0.9*(max detection distance)
-#'
+#'delicately ensure that radial distances in sightings are called "d" not "r"
 #'
 truncate <- function(trunc.prop=0.9, sightings) {
   max.detect <- max(sightings$d)

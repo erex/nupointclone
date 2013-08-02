@@ -16,7 +16,7 @@
 #'variable maxz can be overwritten by seabed at each observation in multibeam case
 pi.z.f <- function(g.type,pars,z,z.lim,seabedAtObs=NULL,n=NULL,mnormPlotFlag=FALSE,
                 mnormVerboseFlag=FALSE){ 
-  maxz=z.lim[2] 
+    maxz=z.lim[2] 
   if(length(seabedAtObs)!=0){
     maxz=seabedAtObs
   #catch length mismatch in   

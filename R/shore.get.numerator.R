@@ -24,7 +24,6 @@ shore.get.numerator <- function(pars,z,dzdy,rd, minz,wx,wz,grad.type,det.type,n=
   #parList=par.unpack.F(grad.type,pars,n)
   #grad.pars=parList[[1]]; det.par=parList[[2]]
   grad.pars=pars[[1]]; det.par=pars[[2]]
-  
   pi.z=pi.z.f(g.type=grad.type,pars=grad.pars,z=z,z.lim=c(minz,wz),n=n)
   
   if(diagnostic){

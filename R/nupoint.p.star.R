@@ -52,7 +52,7 @@ nupoint.p.star <- function(pars.hat,grad.type,det.type,n=NULL,w,theta.max,grid.d
   #detection and density gradient functions. 
   #NB angular detection is not currently implemented, so the angularDetect argument
   #must remain angularDetect=FALSE
-  
+  browser()
   shore.calc.integral.grid.P=
   function(x,y,pars, trunc.dist,grad.type,det.type,attenuation,angularDetect,x.max)
   {

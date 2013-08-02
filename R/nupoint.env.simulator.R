@@ -278,23 +278,22 @@ nupoint.env.simulator <- function(pars=c(60,10,50),z.mat=NULL,xlim=c(0,200),ylim
   yM=matrix(yV,ncol=ncol(z.mat),byrow=TRUE)
 
   plocV=as.vector(pi.y) #weight vector for sightings locations.
-  cols.zmat <- ncol(z.mat)  ###ER 20130724
+  rows.zmat <- nrow(z.mat)  ###ER 20130724
   for(i in 1:nbr.targets)
   {
     sampleElement=sample(x=1:length(plocV) ,size=1,prob=plocV) #sample a location
-#	colSamp=1+floor(sampleElement/nrow(z.mat))
-#	rowSamp=sampleElement-nrow(z.mat)*floor(sampleElement/nrow(z.mat))
-    rowSamp <- 1 + sampleElement %/% cols.zmat ###ER 20130724  integer divide
-    colCandidate <- sampleElement %% cols.zmat ###ER 20130724  modulus
-    if (colCandidate == 0) {
-      colSamp <- cols.zmat
-      rowSamp <- rowSamp - 1
-    } else {
-      colSamp <- colCandidate
-    }
-#    colSamp <- ifelse(colCandidate==0, cols.zmat, colCandidate)
-	if(rowSamp==0 || colSamp==0) browser()
-  if(rowSamp>nrow(xM) || colSamp>ncol(xM)) browser()
+	colSamp= 1 + sampleElement %/% rows.zmat
+	rowSamp= sampleElement - (rows.zmat * sampleElement %/% rows.zmat)
+#     rowSamp <- 1 + sampleElement %/% rows.zmat ###ER 20130724  integer divide
+#     colCandidate <- sampleElement %% rows.zmat ###ER 20130724  modulus
+#     if (colCandidate == 0) {
+#       colSamp <- cols.zmat
+#       rowSamp <- rowSamp - 1
+#     } else {
+#       colSamp <- colCandidate
+#     }
+# 	if(rowSamp==0 || colSamp==0) browser()
+#   if(rowSamp>nrow(xM) || colSamp>ncol(xM)) browser()
     x.coord.vec[i]=xM[rowSamp,colSamp]
 	y.coord.vec[i]=yM[rowSamp,colSamp]
 	z.coord.vec[i]=z.mat[rowSamp,colSamp]

@@ -3,8 +3,8 @@
 \title{Denominator of the environmental variable (depth in case of whale) log-likelihood. NB this is an internal function.}
 \usage{
   shore.get.denominator(pars, num.detects, wx, wy, minz,
-    wz, grad.type, z.mat, dzdy.mat, rd.mat, mask.mat,
-    det.type, n = NULL, diagnostic = FALSE)
+    wz, grad.type, z.mat, dzdy.mat, rd.mat, det.type,
+    n = NULL, diagnostic = FALSE)
 }
 \arguments{
   \item{pars}{model parameters, paramter vector optimised

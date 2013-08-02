@@ -18,7 +18,7 @@
 #'@param           diagnostic  print diagnostic data.
 #'@return   single value of the log-likelihood denominator.
 shore.get.denominator <- function(pars,num.detects,wx,wy,minz,wz,grad.type,
-         z.mat,dzdy.mat,rd.mat,mask.mat,det.type,n=NULL, diagnostic=FALSE)
+         z.mat,dzdy.mat,rd.mat,det.type,n=NULL, diagnostic=FALSE)
 {
 
   #CALLS:     par.unpack.F; detectF; pi.z.f; 
@@ -28,7 +28,6 @@ shore.get.denominator <- function(pars,num.detects,wx,wy,minz,wz,grad.type,
   #grad.pars=parList[[1]]; det.par=parList[[2]]
   grad.pars=pars[[1]]; det.par=pars[[2]]
   det.mat=detectF(rd=rd.mat,det.type=det.type,det.par=det.par)
-  
   pi.z=pi.z.f(g.type=grad.type,pars=grad.pars,z=z.mat,z.lim=c(minz,wz),n=n,
               mnormVerboseFlag=diagnostic)
   
