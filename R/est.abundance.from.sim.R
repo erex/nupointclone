@@ -9,6 +9,10 @@
 #'
 #'@param fit.obj fitted object
 #'@param truncation distance proportion (default 0.9) such that sightings beyond 0.9*max.r are deleted
+#'@param det.model detection model under which to perform estimation, 
+#'if NULL (default), then estimation is performed under true model
+#'@param gradient.model gradient model under which to perform estimation, if NULL (default),
+#'estimation is performed under true model
 #'
 #'@return list containing abundance estimate within covered region and
 #'abundance estimate for entire study area (assuming grid cells are unit square in area)
@@ -34,10 +38,19 @@
 #'            environment.simulator.control=list(c(X=50,Y=10,sd=60),c(X=90,Y=0,sd=30)),
 #'            mask.mat=NULL,mask.ang=0,plot=TRUE,
 #'            perp.lines=NULL,n=NULL)
-#'  (test <- est.abundance.from.sim(mysim, trunc.prop=0.9))
+#'  correct.model <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model=NULL)
+#'  wrong.uni <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="UNIFORM")
+#'  wrong.beta <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="BETA")
+#'  wrong.lognorm <- est.abundance.from.sim(mysim, trunc.prop=0.9, det.model=NULL, gradient.model="LOGNORM")
 
 
-est.abundance.from.sim <- function(environ.sim.dat, trunc.prop=0.9) {
+est.abundance.from.sim <- function(environ.sim.dat, trunc.prop=0.9, det.model=NULL,
+                                   gradient.model=NULL) {
+  estimate.grad.model <- ifelse(is.null(gradient.model),
+                                environ.sim.dat$settings$grad.type,gradient.model)
+  if (estimate.grad.model == "TWEEDIE" | estimate.grad.model =="MNORM" ) stop("Gradient model choice not yet implemented")
+  estimate.det.model <- ifelse(is.null(det.model),
+                                environ.sim.dat$settings$det.type,det.model)
 # there are a few settings that are not produced by simulator that are expected by fitting routine
 #  provide those here
   environ.sim.dat$sighting.mat <- environ.sim.dat$sightings
@@ -66,8 +79,8 @@ sim.norm.fit<-nupoint.env.fit(pars=environ.sim.dat$settings$pars,
                               wx=environ.sim.dat$settings$xlim[2],
                               wy=environ.sim.dat$settings$ylim[2],
                               wz=max(environ.sim.dat$z.mat),
-                              grad.type=environ.sim.dat$settings$grad.type,
-                              det.type=environ.sim.dat$settings$det.type,
+                              grad.type=estimate.grad.model,
+                              det.type=estimate.det.model,
                               n=NULL,lower.b=rep(1,length(environ.sim.dat$settings$pars))
                               ,upper.b=rep(100,length(environ.sim.dat$settings$pars)))
 #  estimate P for HT
