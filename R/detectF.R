@@ -26,6 +26,7 @@
 #'Oxford: Oxford University Press, page 47.
 #'@seealso \code{\link{nupoint.env.fit}}, \code{\link{nupoint.fit}}
 #'@keywords misc
+#'@export
 #'@examples
 #'
 #'rVec=0:100

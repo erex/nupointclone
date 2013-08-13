@@ -34,6 +34,7 @@
 #'considered (not yet implemented).}
 #'@return Probability of detecting a target in the covered region.
 #'@seealso \code{\link{nupoint.fit}}
+#'@export
 #'@keywords misc
 #'@examples
 #'

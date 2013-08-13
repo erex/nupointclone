@@ -97,6 +97,7 @@
 #'function.  See optim help and details.}
 #'@return output as per \code{optim} and AIC.
 #'@seealso \code{\link{nupoint.env.gof}}, \code{optim}, \code{\link{detectF}}
+#'@export
 #'@keywords misc
 #'@examples
 #'

@@ -115,6 +115,7 @@
 #'@return list object of simulator settings, survey region descriptors and
 #'observations (see details).
 #'@seealso \code{\link{detectF}}, \code{\link{nupoint.env.fit}}
+#'@export
 #'@keywords misc
 #'@examples
 #'

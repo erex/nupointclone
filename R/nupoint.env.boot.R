@@ -56,6 +56,7 @@
 #'parameter estimates for each bootstrap.
 #'@seealso \code{\link{detectF}}, \code{\link{nupoint.env.fit}},
 #'\code{\link{sightings}}
+#'@export
 #'@keywords misc
 #'@examples
 #'

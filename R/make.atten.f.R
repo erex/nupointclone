@@ -28,6 +28,7 @@
 #'methods. Journal of the Royal Statistical Society: Series C (Applied
 #'Statistics).
 #'@seealso \code{\link{nupoint.fit}}
+#'@export
 #'@keywords misc
 #'@examples
 #'

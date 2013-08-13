@@ -38,6 +38,7 @@
 #'goodness-of-fit table with columns: bin minimum, bin maximum, expected
 #'sightings, observed sightings, Chisq
 #'@seealso \code{\link{nupoint.env.fit}}
+#'@export
 #'@keywords misc
 #'@examples
 #'

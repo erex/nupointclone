@@ -64,6 +64,7 @@
 #'biomass. See details and the \code{parallel.pdf} vignette.
 #'@seealso \code{\link{detectF}}, \code{\link{nupoint.fit}},'nupoint.p.star',
 #'\code{\link{nupoint.vol.density}},'krill'
+#'@export
 #'@keywords misc
 #'@examples
 #'

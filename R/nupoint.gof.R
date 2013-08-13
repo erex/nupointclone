@@ -44,6 +44,7 @@
 #'sightings, observed sightings, Chisq.
 #'@seealso \code{\link{nupoint.fit}}, \code{\link{detectF}},
 #'\code{\link{nupoint.env.fit}}
+#'@export
 #'@keywords misc
 #'@examples
 #'

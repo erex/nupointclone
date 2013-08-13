@@ -52,6 +52,7 @@
 #'Marques, T.A. , Buckland, S.T. , Borchers, D.L. , Tosh, D. and McDonald, R.A.
 #'(2010). \code{ Point Transect Sampling Along Linear Features } Biometrics ,
 #'vol 66, no. 4, pp. 1247-1255.
+#'@export
 #'@keywords misc
 #'@examples
 #'

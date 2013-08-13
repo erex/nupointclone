@@ -16,6 +16,7 @@
 #'metre of seawater) within a survey region.
 #'@seealso \code{\link{nupoint.p.star}}, and Figure 1 and Section 5.1 of the
 #'\code{parallel.pdf} vignette
+#'@export
 #'@keywords misc
 #'@examples
 #'
